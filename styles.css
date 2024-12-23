@@ -1,0 +1,224 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .page-name h1 {
+    font-size: 24px;
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+/* Auth Links (Sign In / Sign Up) */
+header .auth-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+header .auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Icons Container (Wishlist and Cart) */
+header .icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Icon Styles */
+header .icons a.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffc0cb;
+    width: 60px;
+    height: 60px;
+    transition: background-color 0.3s ease;
+}
+
+header .icons a.icon:hover {
+    background-color: #ff69b4;
+}
+
+header .icons a.icon img {
+    width: 30px;
+    height: 30px;
+}
+
+header .icons a.icon span {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #ffc0cb;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff69b4;
+}
+
+/* Dropdown Menu Styles */
+nav ul li.dropdown {
+    position: relative;
+}
+
+nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    z-index: 1;
+    padding: 10px;
+}
+
+/* Sliding Categories */
+.slide-category {
+    margin-bottom: 10px;
+}
+
+.toggle-slide {
+    color: #000;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.toggle-slide:hover {
+    background-color: #f1f1f1;
+    color: #ff69b4;
+}
+
+/* Initially hide the slide lists */
+.slide-list {
+    display: none;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.slide-list a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 0;
+    display: block;
+}
+
+.slide-list a:hover {
+    background-color: #f1f1f1;
+    color: #ff69b4;
+}
+
+/* Show the list when its category is clicked */
+.slide-category.active .slide-list {
+    display: block;
+}
+
+/* Main Content Section Styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main h1 {
+    color: #ff69b4;
+}
+
+.promotions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.promotions .category {
+    width: 150px;
+    height: 150px;
+    background-color: #ffc0cb;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.promotions .category:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .auth-links {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .promotions {
+        grid-template-columns: 1fr 1fr;
+    }
+}
